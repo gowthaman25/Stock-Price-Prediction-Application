@@ -82,7 +82,7 @@ Model ROC-AUC scores
 
 Clone the repository:
 
-git clone https://github.com/yourusername/stock-prediction-agent.git
+git clone https://github.com/gowthaman25/stock-prediction-agent.git
 cd stock-prediction-agent
 
 
