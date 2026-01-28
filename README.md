@@ -9,6 +9,8 @@ An interactive AI-powered stock movement prediction app built with Streamlit, co
 ✔ Feature engineering using rolling return windows
 ✔ Dual-model prediction system:
 
+(assets/Sc1.png)
+
 ## 🌲 XGBoost for tabular learning
 
 🧠 LSTM Neural Network for time-series pattern learning
@@ -77,7 +79,7 @@ Tomorrow UP probability
 Trading signal (BUY / SELL / HOLD)
 
 ## Model ROC-AUC scores
-
+(assets/Sc2.png)
 ## ⚙️ Installation
 
 ## Clone the repository:
