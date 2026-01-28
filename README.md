@@ -9,7 +9,7 @@ An interactive AI-powered stock movement prediction app built with Streamlit, co
 ✔ Feature engineering using rolling return windows
 ✔ Dual-model prediction system:
 
-![Screenshot](https://raw.githubusercontent.com/gowthaman25/Stock-Price-Prediction-Application/main/assets/Sc1.png)
+![Screenshot](https://github.com/gowthaman25/Stock-Price-Prediction-Application/blob/main/Sc1.png)
 
 ## 🌲 XGBoost for tabular learning
 
@@ -79,7 +79,7 @@ Tomorrow UP probability
 Trading signal (BUY / SELL / HOLD)
 
 ## Model ROC-AUC scores
-![Screenshot](https://raw.githubusercontent.com/gowthaman25/Stock-Price-Prediction-Application/main/assets/Sc2.png)
+![Screenshot](https://github.com/gowthaman25/Stock-Price-Prediction-Application/blob/main/Sc2.png)
 ## ⚙️ Installation
 
 ## Clone the repository:
