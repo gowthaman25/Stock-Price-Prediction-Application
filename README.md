@@ -1,4 +1,4 @@
-### 📈 AI Stock Prediction Agent
+# 📈 AI Stock Prediction Agent
 XGBoost + LSTM Ensemble for Next-Day Market Direction
 
 An interactive AI-powered stock movement prediction app built with Streamlit, combining XGBoost (tabular ML) and LSTM (deep learning for sequences) to forecast whether a stock is likely to go UP 📈 or DOWN 📉 tomorrow.
@@ -83,16 +83,27 @@ Trading signal (BUY / SELL / HOLD)
 ## ⚙️ Installation
 
 ## Clone the repository:
-
+```bash
 git clone https://github.com/gowthaman25/stock-prediction-agent.git
 cd stock-prediction-agent
-
+```
 
 ## Install dependencies:
-
+```bash
 pip install -r requirements.txt
-
+```
 
 ## Run the Streamlit app:
-
+```bash
 streamlit run app.py
+```
+## 📬 Contact
+
+For questions or collaboration requests:
+
+* 📧 Email: [ecsgowtham@gmail.com ](mailto:ecsgowtham@gmail.com )
+* 🌐 GitHub: [gowthaman25](https://github.com/gowthaman25/)
+  
+---
+
+> ✨ Built using [Streamlit](https://streamlit.io/), and LLaMA 3.3 models
