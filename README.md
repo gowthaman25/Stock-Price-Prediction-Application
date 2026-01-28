@@ -9,14 +9,14 @@ An interactive AI-powered stock movement prediction app built with Streamlit, co
 ✔ Feature engineering using rolling return windows
 ✔ Dual-model prediction system:
 
-##🌲 XGBoost for tabular learning
+## 🌲 XGBoost for tabular learning
 
 🧠 LSTM Neural Network for time-series pattern learning
 ✔ Ensemble probability-based trading signal
 ✔ Visual stock performance chart
 ✔ Model validation using ROC-AUC
 
-##🧠 How the Model Works
+## 🧠 How the Model Works
 
 1️⃣ Data Processing
 
