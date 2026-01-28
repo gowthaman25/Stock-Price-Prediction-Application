@@ -1,45 +1,96 @@
-# Stock-Price-Prediction-Application
- An end-to-end Stock Price Prediction application using an Ensemble Learning approach (XGBoost + LSTM).
- The app allows users to input Indian stock symbols (NS / BS exchange) and instantly receive next-day market insights.
+📈 AI Stock Prediction Agent
+XGBoost + LSTM Ensemble for Next-Day Market Direction
 
- 🔑 Key Features
- 
-✅ Interactive price charts for historical trend analysis
+An interactive AI-powered stock movement prediction app built with Streamlit, combining XGBoost (tabular ML) and LSTM (deep learning for sequences) to forecast whether a stock is likely to go UP 📈 or DOWN 📉 tomorrow.
 
- ✅ Predicts tomorrow’s market direction
- 
- ✅ Generates BUY / SELL / HOLD trading signals
- 
- ✅ User-controlled sliding window size
- 
- ✅ Real-time market data using Yahoo Finance (yfinance)
- 
- ✅ Clean and interactive Streamlit UI
- 
-🧠 Model Highlights
+🚀 Live App Features
 
-🔹 Uses past 2 years of closing price data
+✔ Download 3 years of historical stock data from Yahoo Finance
+✔ Feature engineering using rolling return windows
+✔ Dual-model prediction system:
 
- 🔹 Time-series transformed using window-based supervision
- 
- 🔹 Ensemble model combining XGB (tabular strength) + LSTM (sequence learning)
- 
- 🔹 Designed for short-term trend forecasting
- 
-🚧 Next Enhancements Planned
+🌲 XGBoost for tabular learning
 
-🔸 Hybrid AI Agent (Quant + NLP + Human-in-the-loop)
+🧠 LSTM Neural Network for time-series pattern learning
+✔ Ensemble probability-based trading signal
+✔ Visual stock performance chart
+✔ Model validation using ROC-AUC
 
- 🔸 Incorporating user comments & market sentiment into predictions
- 
- 🔸 Prompt-based analytical reasoning
- 
- 🔸 Real-time financial insights using AI
- 
- 🔸 Building scalable end-to-end AI applications
- 
-📌 Note: This project is for educational purposes only and does not constitute financial advice.
+🧠 How the Model Works
+1️⃣ Data Processing
 
-💡 This project helped me learn a lot about time-series forecasting, ensemble modeling, handling real-world data issues, and deploying ML models as web apps.
+Historical stock prices are downloaded using yfinance
 
-Would love to hear your feedback, suggestions, or ideas! 🙌
+Daily returns are calculated
+
+Future return is used to create a classification target
+
+A threshold removes noisy small movements
+
+2️⃣ Feature Engineering
+
+For each day, the model uses the previous N days' returns (Window Size) as features.
+
+Lag Feature	Meaning
+ret_lag_1	Yesterday’s return
+ret_lag_2	Return 2 days ago
+...	...
+ret_lag_N	Return N days ago
+3️⃣ Models Used
+🌲 XGBoost Classifier
+
+Learns nonlinear relationships in tabular lag-return features.
+
+🧠 LSTM Neural Network
+
+Learns temporal patterns from sequences of stock returns.
+
+4️⃣ Ensemble Prediction
+
+Final probability is a weighted average:
+
+Final Probability = 0.6 × XGBoost + 0.4 × LSTM
+
+Probability	Signal
+> 0.60	📈 BUY
+< 0.40	📉 SELL
+0.40 – 0.60	⏸ HOLD
+📊 Model Validation
+
+Performance is evaluated using ROC-AUC on a TimeSeriesSplit validation strategy.
+
+This avoids data leakage and simulates real trading conditions.
+
+🖥 App Interface
+🔍 User Inputs
+
+Stock symbol (Yahoo Finance format, e.g. AAPL, TSLA, RELIANCE.NS)
+
+Window size for historical lookback
+
+📈 Outputs
+
+Historical stock price chart
+
+Tomorrow UP probability
+
+Trading signal (BUY / SELL / HOLD)
+
+Model ROC-AUC scores
+
+⚙️ Installation
+
+Clone the repository:
+
+git clone https://github.com/yourusername/stock-prediction-agent.git
+cd stock-prediction-agent
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Run the Streamlit app:
+
+streamlit run app.py
